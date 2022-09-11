@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <!--From https://codepen.io/frytyler/pen/EGdtg-->
+  <head>
+    <meta charset="UTF-8" />
+    <title>ML API</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Arimo"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Hind:300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+
+  <body>
+    <div class="login">
+  
+     <div> <h1>Cancer Prediction</h1></div>
+
+      <div><h2>{{ prediction_text }}</h2></div>
+      <!-- Main Input For Receiving Query to our ML -->
+      <form action="{{ url_for('predict')}}" method="post">
+       
+        
+
+      <div><input placeholder="Enter your name"/>
+            <input placeholder="Enter your gender">
+            <input placeholder="Enter your age"/>
+      </div>
+
+     <div>
+        <label for="AirPollution">AirPollution</label>
+        <input type="range" id="AirPollution" name="AirPollution" min="0" max="8">
+
+        <label for="Alcoholuse">Alcoholuse</label>
+        <input type="range" id="Alcoholuse" name="Alcoholuse" min="0" max="8">
+
+        <label for="DustAllergy">DustAllergy</label>
+        <input type="range" id="DustAllergy" name="DustAllergy" min="0" max="8">
+
+        <label for="OccuPationalHazards">OccuPationalHazards</label>
+        <input type="range" id="OccuPationalHazards" name="OccuPationalHazards" min="0" max="8">
+
+        <label for="GeneticRisk">GeneticRisk</label>
+        <input type="range" id="GeneticRisk" name="GeneticRisk" min="0" max="7">
+
+        <label for="chronicLungDisease">chronicLungDisease</label>
+        <input type="range" id="chronicLungDisease" name="chronicLungDisease" min="0" max="7">
+
+        <label for="BalancedDiet">BalancedDiet</label>
+        <input type="range" id="BalancedDiet" name="BalancedDiet" min="0" max="7">
+
+        <label for="Obesity">Obesity</label>
+        <input type="range" id="Obesity" name="Obesity" min="0" max="7">
+
+        <label for="Smoking">Smoking</label>
+        <input type="range" id="Smoking" name="Smoking" min="0" max="8">
+
+        <label for="PassiveSmoker">PassiveSmoker</label>
+        <input type="range" id="PassiveSmoker" name="PassiveSmoker" min="0" max="8">
+
+        <label for="ChestPain">ChestPain</label>
+        <input type="range" id="ChestPain" name="ChestPain" min="0" max="9">
+
+        <label for="CoughingofBlood">CoughingofBlood</label>
+        <input type="range" id="CoughingofBlood" name="CoughingofBlood" min="0" max="9">
+
+        <label for="Fatigue">Fatigue</label>
+        <input type="range" id="Fatigue" name="Fatigue" min="0" max="9">
+
+        <label for="WeightLoss">WeightLoss</label>
+        <input type="range" id="WeightLoss" name="WeightLoss" min="0" max="8">
+
+        <label for="ShortnessofBreath">ShortnessofBreath</label>
+        <input type="range" id="ShortnessofBreath" name="ShortnessofBreath" min="0" max="9">
+
+        <label for="Wheezing">Wheezing</label>
+        <input type="range" id="Wheezing" name="Wheezing" min="0" max="8">
+
+        <label for="SwallowingDifficulty">SwallowingDifficulty</label>
+        <input type="range" id="SwallowingDifficulty" name="SwallowingDifficulty" min="0" max="8">
+
+        <label for="ClubbingofFingerNails">ClubbingofFingerNails</label>
+        <input type="range" id="ClubbingofFingerNails" name="ClubbingofFingerNails" min="0" max="9">
+
+        <label for="FrequentCold">FrequentCold</label>
+        <input type="range" id="FrequentCold" name="FrequentCold" min="0" max="7">
+
+        <label for="DryCough">DryCough</label>
+        <input type="range" id="DryCough" name="DryCough" min="0" max="7">
+
+        <label for="Snoring">Snoring</label>
+        <input type="range" id="Snoring" name="Snoring" min="0" max="7">
+      </div>
+        
+    
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">
+          Predict
+        </button>
+      </form>
+
+      <br />
+      <br />
+      
+    </div>
+  </body>
+</html>
